@@ -11,20 +11,19 @@ public class EnemyHitTarget : HitTarget
  
     private int currentHits = 0;
 
-    protected override void Update()
+    void Update()
     {
-        base.Update();
         Move();
     }
 
     //When a hit is taken, add the hit to the score
     //Overriding functions yippee
-    public override void TakeHit(int scoreToAdd)
+    public override void TakeHit()
     {
         currentHits++;
         if (currentHits == hitsToDestroy)
         {
-            totalScore = CalcScore(scoreToAdd);
+            totalScore = CalcScore(hitScore);
             Debug.Log("This is an overridden function");
 
             scoreGUI.text = "+" + hitScore.ToString();
