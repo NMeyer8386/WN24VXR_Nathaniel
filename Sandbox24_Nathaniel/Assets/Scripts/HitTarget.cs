@@ -9,6 +9,7 @@ public class HitTarget : MonoBehaviour
     [SerializeField] protected int hitScore = 1;
     [SerializeField] protected TextMeshProUGUI scoreGUI;
 
+    //Made Virtual so it can be overridden
     public virtual void Start()
     {
         if (scoreGUI == null)
@@ -28,9 +29,10 @@ public class HitTarget : MonoBehaviour
 
         gameObject.GetComponent<Collider>().enabled = false;
         gameObject.GetComponent<Rigidbody>().useGravity = false;
-        Invoke(nameof(Destroy), 1f);
+        Invoke(nameof(Destroy), .5f);
     }
 
+    //Made Virtual so it can be overridden
     public virtual void Destroy()
     {
         Destroy(gameObject);

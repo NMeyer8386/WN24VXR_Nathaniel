@@ -6,23 +6,27 @@ public class EnemySlime : EnemyHitTarget
 {
     [SerializeField] private GameObject babySlime;
     Coroutine jumping;
+    [SerializeField] int jumpRate = 2;
 
+    //Get the playerlocation and begin the jump coroutine
     public override void Start()
     {
         base.Start();
-        playerTarget = GameObject.Find("PlayerLocation").transform;
+        playerTarget = GameObject.Find("/Main Camera/PlayerLocation").transform;
         jumping = StartCoroutine(Jump());
         Move();
     }
 
+    //Move the thing
     public override void Move()
     {
         base.Move();
     }
 
+    //Runs every 2 seconds and makes the thing jump by adding force so long as its on the ground
     IEnumerator Jump()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(jumpRate);
         while (true)
         {
             if (gameObject.transform.position.y <= .4f)
@@ -30,10 +34,11 @@ public class EnemySlime : EnemyHitTarget
                 gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 50);
                 Debug.Log("Jumping");
             }
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(jumpRate);
         }
     }
 
+    //If its the main slime, make two baby slimes and spawn them next to the main slime, otherwise destroy regularly
     public override void Destroy()
     {
         if (!gameObject.CompareTag("Baby Slime"))

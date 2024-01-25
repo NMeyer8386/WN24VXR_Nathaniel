@@ -11,7 +11,8 @@ public class EnemyHitTarget : HitTarget
  
     private int currentHits = 0;
 
-    void Update()
+    //Moves the thing
+    void FixedUpdate()
     {
         Move();
     }
@@ -33,20 +34,22 @@ public class EnemyHitTarget : HitTarget
 
     }
 
+    //If theres a player target set, move it by movespeed * time.deltatime
     public virtual void Move()
     {
         if (playerTarget == null) { return; }
 
         var step = moveSpeed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, playerTarget.position, step);
-
+        transform.position = Vector3.MoveTowards(transform.position, playerTarget.position, step);  //MoveTowards(CurrentPos, TargetPos, Speed)
     }
 
+    //This is where attack code will go
     private void Attack()
     {
         Debug.Log(gameObject.name + " is attacking Player", gameObject);
     }
 
+    //If thing hits the player, run the attack function every second
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -55,7 +58,7 @@ public class EnemyHitTarget : HitTarget
         }
     }
 
-    //Add given score to the total
+    //Add passed score to the total
     public override int CalcScore(int score)
     {
         int scoreGain = hitsToDestroy * score;
