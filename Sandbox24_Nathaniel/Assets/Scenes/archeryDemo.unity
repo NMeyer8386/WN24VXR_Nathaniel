@@ -145,8 +145,10 @@ MonoBehaviour:
   scoreGUI: {fileID: 1691575852}
   hitsToDestroy: 1
   playerTarget: {fileID: 935848916}
-  moveSpeed: 0.001
+  moveSpeed: 0.5
   repeatRate: 1
+  babySlime: {fileID: 8027514760390140815, guid: 49bf63e3d7624d140a799537e73c8534,
+    type: 3}
 --- !u!1 &781941461
 GameObject:
   m_ObjectHideFlags: 0

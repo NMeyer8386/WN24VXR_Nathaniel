@@ -360,7 +360,7 @@ MonoBehaviour:
   scoreGUI: {fileID: 5681586546659154006}
   hitsToDestroy: 2
   playerTarget: {fileID: 0}
-  moveSpeed: 0.0001
+  moveSpeed: 0.25
   repeatRate: 1
 --- !u!54 &8314541808956600341
 Rigidbody:

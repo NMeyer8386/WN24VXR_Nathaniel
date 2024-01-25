@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyHitTarget : HitTarget
 {
     [SerializeField] private int hitsToDestroy = 1;
-    [SerializeField] Transform playerTarget;
-    [SerializeField] private float moveSpeed = 0.001f;
+    public Transform playerTarget;
+    [SerializeField] private float moveSpeed = .5f;
     [SerializeField] protected float repeatRate = 1f;
  
     private int currentHits = 0;
@@ -28,7 +28,7 @@ public class EnemyHitTarget : HitTarget
 
             scoreGUI.text = "+" + hitScore.ToString();
 
-            Invoke(nameof(Destroy), 1f);
+            Invoke(nameof(Destroy), .5f);
         }
 
     }
@@ -37,7 +37,7 @@ public class EnemyHitTarget : HitTarget
     {
         if (playerTarget == null) { return; }
 
-        var step = moveSpeed + Time.deltaTime;
+        var step = moveSpeed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, playerTarget.position, step);
 
     }

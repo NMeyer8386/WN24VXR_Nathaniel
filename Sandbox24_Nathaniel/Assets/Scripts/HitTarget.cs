@@ -9,7 +9,7 @@ public class HitTarget : MonoBehaviour
     [SerializeField] protected int hitScore = 1;
     [SerializeField] protected TextMeshProUGUI scoreGUI;
 
-    private void Start()
+    public virtual void Start()
     {
         if (scoreGUI == null)
         {
@@ -31,7 +31,7 @@ public class HitTarget : MonoBehaviour
         Invoke(nameof(Destroy), 1f);
     }
 
-    protected virtual void Destroy()
+    public virtual void Destroy()
     {
         Destroy(gameObject);
     }
