@@ -13,22 +13,5 @@ MonoBehaviour:
   m_Name: vHierarchy Data
   m_EditorClassIdentifier: 
   sceneDatasByGuid:
-    keys:
-    - 30af3d39db794cd4ea00b42638350cf6
-    values:
-    - goDatasByGlobalId:
-        keys:
-        - GlobalObjectId_V1-2-30af3d39db794cd4ea00b42638350cf6-822930539-0
-        - GlobalObjectId_V1-2-30af3d39db794cd4ea00b42638350cf6-5447671050350488159-3493175360647975908
-        values:
-        - iColor: 0
-          icon: Settings Icon
-        - iColor: 0
-          icon: 
-      goDatasByInstanceId:
-        keys: e8f5ffff14640000
-        values:
-        - iColor: 0
-          icon: Settings Icon
-        - iColor: 0
-          icon: 
+    keys: []
+    values: []
