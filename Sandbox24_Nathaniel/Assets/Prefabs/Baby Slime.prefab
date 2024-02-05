@@ -256,6 +256,7 @@ MonoBehaviour:
   moveSpeed: 0.75
   repeatRate: 1
   babySlime: {fileID: 0}
+  jumpRate: 2
 --- !u!1 &8338414570451144139
 GameObject:
   m_ObjectHideFlags: 0

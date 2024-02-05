@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*  Enemy Slime
+ *  
+ *  This script uses Inheritance to create a Slime Enemy type
+ *  This enemy type can jump, and breaks into two smaller slimes when destroyed
+ */
+
 public class EnemySlime : EnemyHitTarget
 {
     [SerializeField] private GameObject babySlime;
@@ -15,12 +21,6 @@ public class EnemySlime : EnemyHitTarget
         playerTarget = GameObject.Find("/Main Camera/PlayerLocation").transform;
         jumping = StartCoroutine(Jump());
         Move();
-    }
-
-    //Move the thing
-    public override void Move()
-    {
-        base.Move();
     }
 
     //Runs every 2 seconds and makes the thing jump by adding force so long as its on the ground
