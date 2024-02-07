@@ -465,17 +465,6 @@
                 },
                 {
                     "name": "",
-                    "id": "583bd4fd-754c-4e71-972b-60d1e120215b",
-                    "path": "<Keyboard>/space",
-                    "interactions": "Press(behavior=2)",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "863d5818-8537-46f8-8861-0a81bf75c8b7",
                     "path": "<XRController>{LeftHand}/start",
                     "interactions": "",
@@ -941,6 +930,34 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "PointerRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "RightHand",
+            "id": "4ac7bebb-85a8-48bf-b336-58c33f10d9c1",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "e96af36c-5db2-47dd-b38f-d55543157cfd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "be52ce15-e2e8-4c1c-bd42-8337b8e3ce5f",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
