@@ -1,0 +1,122 @@
+{
+    "name": "OgungusControls",
+    "maps": [
+        {
+            "name": "Jump",
+            "id": "77599cd3-6888-4a85-992b-a71b41a83ee5",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "2fb601d3-8ff7-49d3-b7c0-738be3edf40b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "65f6de14-6239-49eb-8d39-3653e84e53e1",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Controller Data",
+            "id": "f9a9b568-06f1-4fa6-a062-fdc2732d62dd",
+            "actions": [
+                {
+                    "name": "AngularVelocityRight",
+                    "type": "Value",
+                    "id": "c9f90f83-67f3-4a53-8de6-9907868ecb7d",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "VelocityRight",
+                    "type": "Value",
+                    "id": "b1652c4d-73ed-4e38-bf29-75380d28ad68",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "AngularVelocityLeft",
+                    "type": "Value",
+                    "id": "6955697c-0d0f-471c-a04c-e176f1126d06",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "VelocityLeft",
+                    "type": "Value",
+                    "id": "6cb7a6b2-028a-4f5a-8bc8-160178ff4915",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "566d7335-acae-4d19-9dbd-ee0ac3beaac6",
+                    "path": "<XRController>{RightHand}/deviceAngularVelocity",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AngularVelocityRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c5af68ef-3abb-4cc4-8825-27f4f8a02d2a",
+                    "path": "<XRController>{RightHand}/deviceVelocity",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VelocityRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aeb093c1-098b-4e50-ac29-a99fa1328739",
+                    "path": "<XRController>{LeftHand}/deviceVelocity",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VelocityLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "923e535c-5202-403c-97bd-791b0abdede1",
+                    "path": "<XRController>{LeftHand}/deviceAngularVelocity",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AngularVelocityLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
